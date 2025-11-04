@@ -1,0 +1,103 @@
+/* Estilos Base para Escritorio */
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex; /* Habilita Flexbox */
+    justify-content: space-between; /* Espacio entre el logo y el menú */
+    align-items: center; /* Centra verticalmente */
+}
+
+/* Estilos del Logo */
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.logo-icon {
+    margin-right: 5px;
+}
+
+/* Estilos de la Lista de Navegación */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* En escritorio, los enlaces van en línea */
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+/* Ocultar el checkbox y el icono de hamburguesa por defecto (para escritorio) */
+.menu-toggle,
+.menu-icon {
+    display: none;
+}
+
+/* --- Media Query para Tablets y Móviles (Máximo 768px) --- */
+@media (max-width: 768px) {
+    /* Mostrar el icono de hamburguesa */
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        z-index: 10; /* Asegura que esté por encima del menú desplegable */
+        padding: 5px;
+    }
+
+    /* Estilo del icono de hamburguesa */
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px 0;
+        background-color: white;
+        transition: 0.4s;
+    }
+
+    /* Ocultar la lista de navegación por defecto en móviles */
+    .nav-menu {
+        position: absolute;
+        top: 60px; /* Debajo del header */
+        right: 0;
+        width: 100%;
+        max-height: 0; /* Oculto inicialmente */
+        overflow: hidden;
+        background-color: #444; /* Fondo del menú desplegable */
+        transition: max-height 0.4s ease-out;
+    }
+
+    /* La lista en modo móvil debe ser vertical */
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-list li a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #555;
+    }
+
+    /* Mostrar el menú cuando el checkbox está marcado */
+    #menu-toggle:checked ~ .nav-menu {
+        max-height: 300px; /* Suficiente altura para mostrar todos los ítems */
+    }
+
+    /* Animación del icono de hamburguesa a "X" (opcional) */
+    #menu-toggle:checked ~ .menu-icon .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    #menu-toggle:checked ~ .menu-icon .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked ~ .menu-icon .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
