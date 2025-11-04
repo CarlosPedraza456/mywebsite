@@ -2,7 +2,68 @@ body {
     padding: 0;
     margin: 0;
 }
-app-flare-shadow {
-    z-index: 1;
-    position: relative;
+/* 1. Contenedor Global para el Fondo */
+.background-flares {
+    position: fixed; /* Fijo para que esté detrás de todo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1; /* Asegura que esté detrás de todo el contenido */
+    overflow: hidden; /* Importante para que los flares no causen barras de desplazamiento */
+}
+
+/* 2. Estilos Comunes para los Flares/Destellos */
+.flare {
+    position: absolute;
+    border-radius: 50%; /* Para que sean circulares o elípticos */
+    opacity: 0.3; /* ¡Muy transparentes, como solicitaste! */
+    filter: blur(50px); /* Desenfoque para un efecto de sombra suave */
+}
+
+/* 3. Definiciones Específicas de cada Flare */
+
+/* Flare 1: Grande y con un color sutil (ej: azul) */
+.flare-1 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, transparent 70%);
+    animation: move-flare-1 30s infinite alternate ease-in-out;
+}
+
+/* Flare 2: Mediano, otro color (ej: magenta/púrpura) */
+.flare-2 {
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(78, 78, 78, 0.5) 0%, transparent 70%);
+    animation: move-flare-2 25s infinite alternate-reverse ease-in-out;
+}
+
+/* Flare 3: Pequeño, color neutro o de acento (ej: cian/verde) */
+.flare-3 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(168, 168, 168, 0.5) 0%, transparent 70%);
+    animation: move-flare-3 40s infinite alternate ease-in-out;
+}
+
+/* 4. Definición de la Animación (Keyframes) */
+
+/* Movimiento para el Flare 1 */
+@keyframes move-flare-1 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(70vw, 50vh) scale(1.1); }
+}
+
+/* Movimiento para el Flare 2 */
+@keyframes move-flare-2 {
+    0% { transform: translate(100vw, 50vh) scale(1.2); }
+    100% { transform: translate(30vw, 90vh) scale(1); }
+}
+
+/* Movimiento para el Flare 3 */
+@keyframes move-flare-3 {
+    0% { transform: translate(30vw, 90vh) scale(1); }
+    100% { transform: translate(10vw, 10vh) scale(1.2); }
 }

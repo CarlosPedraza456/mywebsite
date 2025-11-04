@@ -6,6 +6,7 @@
     display: flex; /* Habilita Flexbox */
     justify-content: space-between; /* Espacio entre el logo y el menú */
     align-items: center; /* Centra verticalmente */
+    z-index: 100;
 }
 
 /* Estilos del Logo */
