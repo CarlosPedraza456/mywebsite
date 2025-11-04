@@ -1,0 +1,98 @@
+/* Estilos generales del contenedor para centrar contenido */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-me {
+    padding: 60px 0;
+    background-color: #333; /* Contraste con el fondo dinámico */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #cccccc;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #00eeff; /* Línea de acento Cyan */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.about-content {
+    display: flex; /* Habilita el diseño de dos columnas */
+    gap: 40px; /* Espacio entre las columnas */
+    align-items: flex-start;
+}
+
+/* Columna de Resumen */
+.about-summary {
+    flex: 2; /* Ocupa más espacio que la columna de habilidades */
+    line-height: 1.7;
+    font-size: 1.1em;
+}
+
+.about-summary p {
+    margin-bottom: 15px;
+    color: #aaaaaa;
+}
+
+/* Lista de Hechos Clave */
+.key-facts {
+    list-style: none;
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    color: #FFF;
+}
+
+.key-facts li {
+    margin-bottom: 8px;
+}
+
+/* Columna de Habilidades */
+.about-skills {
+    flex: 1; /* Ocupa menos espacio */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.skills-title {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Estilo para las etiquetas de habilidades */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las etiquetas salten de línea */
+    gap: 10px;
+}
+
+.skill-tag {
+    background-color: #ffd700; /* Dorado como color de acento */
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+
+/* --- Media Query: Hacerlo de una columna en móviles/tablets --- */
+@media (max-width: 800px) {
+    .about-content {
+        flex-direction: column; /* Apila las columnas verticalmente */
+        gap: 30px;
+    }
+
+    .about-summary,
+    .about-skills {
+        flex: auto;
+        width: 100%;
+    }
+}
