@@ -1,0 +1,76 @@
+/* Estilos para la Sección Hero */
+.hero {
+    /* Ocupa al menos el 80% de la altura de la ventana (viewport height) */
+    min-height: 80vh; 
+    
+    /* Centrar el contenido usando Flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Opcional: Un fondo visual */
+    background-color: #f4f4f9;
+    /* Puedes reemplazar con una imagen de fondo (ej: background: url('ruta/a/imagen.jpg') center/cover;) */
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 900px;
+    padding: 20px;
+}
+
+.hero-title {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.hero-subtitle {
+    font-size: 1.4em;
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.hero-description {
+    font-size: 1.2em;
+    color: #777;
+    margin-bottom: 10px;
+    font-style: italic; /* Para destacar la propuesta de valor */
+    font-weight: 400;
+}
+
+/* Estilos del Botón CTA (Llamada a la Acción) */
+.cta-button {
+    display: inline-block;
+    background-color: #333; /* Color primario */
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border: 1px solid #333;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #f4f4f9;
+    border: 1px solid #333;
+    color: #333;
+}
+
+/* Adaptación Responsiva para el Hero Section */
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 3em; /* Reducir el tamaño de la fuente en móviles */
+    }
+
+    .hero-subtitle {
+        font-size: 1.5em;
+    }
+    
+    .hero-description {
+        font-size: 1.1em;
+    }
+}
