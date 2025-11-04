@@ -39,6 +39,7 @@
     margin-bottom: 10px;
     font-style: italic; /* Para destacar la propuesta de valor */
     font-weight: 400;
+    position: relative;
 }
 
 /* Estilos del Botón CTA (Llamada a la Acción) */
