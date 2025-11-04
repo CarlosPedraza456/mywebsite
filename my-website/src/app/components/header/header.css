@@ -1,8 +1,8 @@
 /* Estilos Base para Escritorio */
 .header {
     background-color: #333;
-    color: white;
-    padding: 10px 20px;
+    color: #333;
+    padding: 20px 20px;
     display: flex; /* Habilita Flexbox */
     justify-content: space-between; /* Espacio entre el logo y el menú */
     align-items: center; /* Centra verticalmente */
@@ -10,9 +10,9 @@
 
 /* Estilos del Logo */
 .logo {
-    color: white;
+    color: #f5f5f5;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 3em;
     font-weight: bold;
 }
 .logo-icon {
@@ -28,10 +28,15 @@
 }
 
 .nav-list li a {
-    color: white;
+    color: #f5f5f5;
     text-decoration: none;
     padding: 10px 15px;
     display: block;
+    transition: 0.5s ease-out;
+}
+.nav-list li a:hover {
+    color: #00eeff;
+    transition: 0.5s ease-in;
 }
 
 /* Ocultar el checkbox y el icono de hamburguesa por defecto (para escritorio) */
