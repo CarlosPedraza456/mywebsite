@@ -3,6 +3,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
 }
 /* Asegúrate de que .section-title también esté definido para centrar el título */
 
@@ -14,7 +15,6 @@
 .experience-section {
     padding: 80px 0;
     background-color: #f4f4f9; /* Fondo claro para contraste */
-    position: relative;
     z-index: 10;
 }
 
