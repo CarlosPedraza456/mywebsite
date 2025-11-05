@@ -55,7 +55,6 @@
 .about-skills {
     flex: 1; /* Ocupa menos espacio */
     background-color: #f9f9f9;
-    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
@@ -64,6 +63,7 @@
     font-size: 1.5em;
     color: #333;
     margin-bottom: 15px;
+    margin-left: 20px;
 }
 
 /* Estilo para las etiquetas de habilidades */
@@ -71,6 +71,7 @@
     display: flex;
     flex-wrap: wrap; /* Permite que las etiquetas salten de línea */
     gap: 10px;
+    padding: 20px;
 }
 
 .skill-tag {
