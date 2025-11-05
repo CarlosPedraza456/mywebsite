@@ -1,0 +1,52 @@
+<section id="experience" class="experience-section">
+    <div class="container"> 
+        <h2 class="section-title">Experiencia Laboral</h2>
+        
+        <div class="timeline">
+
+            <div class="timeline-item" *ngFor="let job of experienceList">
+                <div class="job-image-container">
+                    <img [src]="job.logoUrl" [alt]="'Logo de ' + job.company" class="job-logo">
+                </div>
+                <div class="job-details">
+                    <h3>{{ job.title }}</h3>
+                    <h4>{{ job.company }}, {{ job.location }}</h4>
+                    <span class="job-dates">{{ job.dates }}</span>
+                    
+                    <ul>
+                        <li *ngFor="let resp of job.responsibilities">{{ resp }}</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="projects-section">
+    <div class="container">
+        <h2 class="section-title">Proyectos Destacados</h2>
+
+        <div class="projects-grid">
+            
+            <div class="project-card" *ngFor="let project of projectsList">
+                <div class="project-image-wrapper">
+                    <img [src]="project.imageUrl" [alt]="'Captura de Pantalla ' + project.title" class="project-image">
+                </div>
+                
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.description }}</p>
+                
+                <div class="project-tags">
+                    <span class="tag" *ngFor="let tag of project.tags">{{ tag }}</span>
+                </div>
+                
+                <div class="project-links">
+                    <a [href]="project.demoLink" target="_blank" class="link-btn primary">Ver Demo</a>
+                    <a [href]="project.githubLink" target="_blank" class="link-btn secondary">GitHub</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
