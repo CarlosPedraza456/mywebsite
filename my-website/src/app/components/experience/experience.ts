@@ -35,13 +35,13 @@ export class ExperienceComponent implements OnInit { // Usamos la convención Co
     {
       title: 'Front End Developer',
       company: 'Renegade CA',
-      location: 'Madrid, España',
-      dates: '2025 - Presente',
+      location: 'Madrid, Spain',
+      dates: '2025 - 2025',
       logoUrl: 'icons/renegade.png',
       responsibilities: [
-        'Desarrollo de nuevas funcionalidades y módulos con VUE, Nuxt y TypeScript.',
-        'Implementación de estilos SASS/SCSS e Ionic para el desarrollo de aplicaciones móviles.',
-        'Colaboración activa con los equipos de diseño (Figma) y gestión (Jira/Slack) para la entrega ágil.'
+        'Development of new functionalities and modules with VUE, Nuxt and TypeScript.',
+        'Implementation of SASS/SCSS and Ionic styles for mobile application development.',
+        'Active collaboration with design (Figma) and management (Jira/Slack) teams for agile delivery.'
       ]
     },
     {
